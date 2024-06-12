@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangla College Physics Society</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0ad159;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .header-content {
+            font-size: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0.1; /* Reduce brightness to 10% */
+            display: inline-block;
+        }
+        .char {
+            display: inline-block;
+            transition: transform 3s;
+        }
+        h1 {
+            display: inline-block;
+            position: relative;
+            animation: moveRightToLeft 20s linear infinite, changeColors 5s linear infinite;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            z-index: 1; /* Ensure the h1 is above the background text */
+        }
+        @keyframes moveRightToLeft {
+            0% {
+                left: 100%;
+            }
+            100% {
+                left: -100%;
+            }
+        }
+        @keyframes changeColors {
+            /* Violet to Blue */
+0% { color: #5733FF; }      /* Violet */
+20% { color: #7533FF; }     /* Deep Violet */
+40% { color: #A333FF; }     /* Purple */
+60% { color: #B333FF; }     /* Medium Purple */
+80% { color: #D233FF; }     /* Dark Magenta */
+100% { color: #0000FF; }    /* Blue */
+
+/* Blue to Sky Blue */
+0% { color: #0000FF; }      /* Blue */
+25% { color: #66CCFF; }     /* Sky Blue */
+50% { color: #99CCFF; }
+75% { color: #CCCCFF; }
+100% { color: #FFFFFF; }    /* White */
+
+/* Sky Blue to Green */
+0% { color: #33CCFF; }      /* Sky Blue */
+25% { color: #33FF99; }     /* Light Greenish Blue */
+50% { color: #33FF66; }
+75% { color: #33FF33; }
+100% { color: #FFFF00; }    /* Yellow */
+
+/* Green to Yellow */
+0% { color: #33FF00; }      /* Green */
+25% { color: #99FF00; }     /* Medium Lime Green */
+50% { color: #CCFF00; }
+75% { color: #FFFF00; }     /* Yellow */
+100% { color: #FFCC00; }    /* Orange */
+
+/* Yellow to Orange */
+0% { color: #FFFF00; }      /* Yellow */
+25% { color: #FFFF66; }     /* Pale Yellow */
+50% { color: #FFFF99; }
+75% { color: #FFFFCC; }
+100% { color: #FF0000; }    /* Red */
+
+/* Orange to Red */
+0% { color: #FFCC00; }      /* Orange */
+25% { color: #FF6633; }     /* Light Red Orange */
+50% { color: #FF3333; }
+75% { color: #FF0000; }     /* Red */
+100% { color: #333333; }     /* Gray */
+
+/* Black to White */
+50% { color: #333333; }     /* Gray */
+100% { color: #FFFFFF; }    /* White */
+
+
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .contact-info img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content" id="header-text">
+            <!-- Text content will be injected by JavaScript -->
+        </div>
+        <h1>Bangla College Physics Society</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#members">Members</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to the Bangla College Physics Society. We are a group of enthusiastic physics students and faculty dedicated to exploring the wonders of physics. Our society aims to foster a love for physics through various events, discussions, and activities.</p>
+        </section>
+        <section id="events">
+            <h2>Events</h2>
+            <p>We organize a variety of events including lectures, workshops, and field trips. Stay tuned for our upcoming events!</p>
+        </section>
+        <section id="members">
+            <h2>Members</h2>
+            <p>Our society is made up of students from all years as well as faculty members. Together, we share a passion for physics and a commitment to learning.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>If you have any questions or would like to join the Bangla College Physics Society, please reach out to us at our facebook group:</p>
+                <a href="https://www.facebook.com/groups/gbcps.org" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"> /Bangla College Physics Society
+                </a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Bangla College Physics Society. All rights reserved.</p>
+    </footer>
+    <script>
+     document.addEventListener("DOMContentLoaded", function() {
+    const headerText = "E=mc² F=Gmm/d² e^iπ+1=0 E=hf";
+    const headerElement = document.getElementById("header-text");
+
+    // Split the text into individual character groups wrapped in span elements
+    headerElement.innerHTML = headerText.split(" ").map(charGroup => {
+        return charGroup.split("").map(char => `<span class="char">${char}</span>`).join("");
+    }).join("&nbsp;");
+
+    function breakAndRearrange() {
+        const chars = document.querySelectorAll(".char");
+        chars.forEach(char => {
+            const angle = Math.random() * 360;
+            const x = Math.random() * 100 - 50;
+            const y = Math.random() * 100 - 50;
+            char.style.transform = `rotate(${angle}deg) translate(${x}px, ${y}px)`;
+        });
+
+        setTimeout(() => {
+            chars.forEach(char => {
+                char.style.transform = "rotate(0deg) translate(0, 0)";
+            });
+        }, 3000);
+    }
+
+    setInterval(breakAndRearrange, 6000);
+});
+
+
+
+    </script>
+</body>
+</html>
